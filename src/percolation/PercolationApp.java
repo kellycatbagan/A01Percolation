@@ -2,6 +2,8 @@ package percolation;
 
 public class PercolationApp {
 
+	//Test the statistics collected from PercolationStats.java
+	
 	public static void main(String[] args) {
 		PercolationStats test1 = new PercolationStats(200,100);
 		PercolationStats test2 = new PercolationStats(200,100);

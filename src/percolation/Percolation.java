@@ -4,8 +4,11 @@ import edu.princeton.cs.algs4.WeightedQuickUnionUF;
 
 public class Percolation {
 	
+	//Grid to find percolation
 	boolean[][] perc;
+	//Keep track of connected cells
 	WeightedQuickUnionUF perc1D;
+	//Size of the grid
 	int N;
 	
 	public Percolation(int N) {
@@ -23,6 +26,7 @@ public class Percolation {
 		}
 	}
 	
+	//Validates cells
 	private boolean validateIndices(int i, int j) {
 		int N = perc[0].length;
 		if (i >= N ||  i < 0 || j >= N || j < 0) {
@@ -31,6 +35,7 @@ public class Percolation {
 		return true;
 	}
 	
+	//Converts a two dimensional array into a one dimensional array
 	private int twoDToOneD(int i, int j) {
 		return perc[0].length*i+j+1;
 	}

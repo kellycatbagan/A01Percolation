@@ -84,7 +84,8 @@ public class PercolationVisualizer {
     }
 
     public static void main(String[] args) {
-        String filename = args[0];
+    	//Filename is computer Specific.  Right Click input20.txt and copy the location path.
+        String filename = "C:\\Users\\Alex\\git\\A01Percolation\\src\\percolation\\input20.txt";
         simulateFromFile(filename);
     }
 }
