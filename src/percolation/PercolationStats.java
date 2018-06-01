@@ -6,7 +6,9 @@ import edu.princeton.cs.algs4.StdStats;
 public class PercolationStats {
 
 	int[] openNodes;
+	double[] normalizedNodes;
 	int T, N;
+	int gridSize;
 
 	public PercolationStats(int N, int T) {
 		if(N <= 0 || T <= 0) {
@@ -16,9 +18,11 @@ public class PercolationStats {
 		Percolation p;
 		//keeping track of openNodes for each percolation
 		openNodes = new int[T];
+		normalizedNodes = new double[T];
 		//Size and Times Run variables
 		this.T = T;
 		this.N = N;
+		this.gridSize = N*N;
 
 		//run T times
 		for (int k = 0; k < T; k++) {
@@ -33,14 +37,18 @@ public class PercolationStats {
 				}
 			}
 		}
+		
+		//normalize results
+		for (int l = 0; l < T; l++)
+			normalizedNodes[l] = (double) openNodes[l] / gridSize;
 	}
 
 	public double mean() {
-		return (StdStats.mean(openNodes) / (N * N));
+		return (StdStats.mean(normalizedNodes));
 	}
 
 	public double stddev() {
-		return (StdStats.stddev(openNodes));
+		return (StdStats.stddev(normalizedNodes));
 	}
 
 	public double confidenceLow() {
