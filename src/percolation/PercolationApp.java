@@ -5,9 +5,9 @@ public class PercolationApp {
 	//Test the statistics collected from PercolationStats.java
 	
 	public static void main(String[] args) {
-		PercolationStats test1 = new PercolationStats(4,2);
-		PercolationStats test2 = new PercolationStats(3,2);
-		PercolationStats test3 = new PercolationStats(2,2);
+		PercolationStats test1 = new PercolationStats(200,100);
+		PercolationStats test2 = new PercolationStats(200,100);
+		PercolationStats test3 = new PercolationStats(2,100000);
 		
 		System.out.println("Test 1:");
 		printTest(test1);

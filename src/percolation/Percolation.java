@@ -21,7 +21,7 @@ public class Percolation {
 			perc1D.union(0,i);
 		}
 		// connect the bottom to "sink" node N*N+1
-		for (int i = N*N-1; i < N*N+1; i++) {
+		for (int i = N*(N - 1) + 1; i < N*N+1; i++) {
 			perc1D.union(N*N+1, i);
 		}
 	}
