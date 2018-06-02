@@ -30,6 +30,7 @@ public class PercolationStats {
 				if (!p.isOpen(i, j)) {
 					p.open(i, j);
 					openNodes[k]++;
+					System.out.println(openNodes[k]);
 				}
 			}
 		}
